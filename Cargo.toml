@@ -5,3 +5,9 @@ edition = "2018"
 
 [dependencies]
 enigo = "=0.0.14"
+
+[profile.release]
+opt-level = 'z'  # Optimize for size
+lto = true
+codegen-units = 1
+panic = 'abort'
